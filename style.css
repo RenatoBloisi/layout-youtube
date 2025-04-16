@@ -1,0 +1,264 @@
+/*Básico e Principal*/
+
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+
+    background-color: hsl(0, 0%, 5%);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+
+    height: 5em;
+}
+
+#SideMenu {
+    background: none;
+    border: none;
+
+    padding: 1em;
+    margin: 1em;
+    border-radius: 5em;
+}
+
+#SideMenu:hover {
+    background-color: hsl(0, 0%, 25%);
+}
+
+h1 {
+    display: inline-block;
+
+    margin: 0 0 0 0.1em;
+    color: white;
+}
+
+header form {
+    display: inline-block;
+    background-color: hsl(0, 0%, 25%);
+
+    border-radius: 1em;
+}
+
+#SearchBar {
+    background-color: hsl(0, 0%, 15%);
+    border: none;
+    color: hsl(0, 0%, 50%);
+
+    padding: 0.5em;
+    margin: 0.2em;
+
+    border-radius: 1em 0 0 1em;
+
+    width: 30em;
+}
+
+#SearchButton {
+    background-color: hsl(0, 0%, 30%);
+
+    float: right;
+
+    padding: 0.5em 1em 0.5em 1.3em;
+    margin: 0.2em;
+
+    border-radius: 0 1em 1em 0;
+}
+
+header button {
+    background-color: hsl(0, 0%, 30%);
+    border: none;
+
+    padding: 0.5em 1em 0.5em 1em;
+
+    border-radius: 2em;
+}
+
+#login {
+    border: thin solid white;
+    border-radius: 2em;
+
+    padding: 0.5em;
+}
+
+#login a {
+    color: white;
+    text-decoration: none;
+}
+
+/**/
+
+nav {
+    display: none;
+    flex-direction: column;
+
+    width: 10em;
+    height: 100vh;
+    position: absolute;
+
+    background-color: darkgrey;
+}
+
+main {
+    display: grid;
+    gap: 1em;
+
+    grid-template-areas: 
+    'video tab tab tab tab tab tab'
+    'com tab tab tab tab tab tab'
+    'com tab tab tab tab tab tab'
+    'com tab tab tab tab tab tab'
+    'com tab tab tab tab tab tab'
+    'com tab tab tab tab tab tab'
+    'com tab tab tab tab tab tab';
+
+    height: 200vh;
+}
+
+/*Parte do Vídeo e sua descrição*/
+
+#Video {
+    grid-area: video;
+    display: flex;
+    flex-direction: column;
+}
+
+iframe {
+    position: relative;
+
+    margin: 0 6em 0 6em;
+
+    border-radius: 1em;
+}
+
+#frame {
+    float: left;
+
+    height: 739;
+    width: 1314;
+}
+
+h2 {
+    color: white;
+}
+
+span {
+    color: hsl(214, 100%, 60%);
+}
+
+#account {
+    background-color: white;
+
+    padding: 0.6em 0.3em 0.6em 0.3em;
+    border-radius: 2em;
+}
+
+#channel {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    color: white;
+}
+
+p {
+    display: inline-block;
+    line-height: 1em;
+
+    position: relative;
+    bottom: 1.5em;
+}
+
+#subs {
+    display: inline;
+    font-size: 0.8em;
+
+    color: hsl(0, 0%, 25%);
+}
+
+#name {
+    display: inline;
+    float: inline-start;
+}
+
+#Video button {
+    border: none;
+    border-radius: 2em;
+
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+
+    padding: 0.6em;
+}
+
+#desc {
+    background-color: hsl(0, 0%, 30%);
+    width: 77vw;
+    height: 10em;
+    margin: 0 0 0 1em;
+    padding: 1.5em 1em 1em 1em;
+    color: white;
+    border-radius: 1em;
+}
+
+/*Tabela de Vídeos*/
+
+#Tab {
+    grid-area: tab;
+    display: flex;
+    flex-direction: column;
+}
+
+.miniatura {
+    height: 10em;
+    width: 20em;
+    margin: 1em;
+    background-color: hsl(0, 0%, 30%);
+    border-radius: 1em;
+}
+
+.miniatura img {
+    height: 10em;
+    width: 20em;
+    border-radius: 1em;
+}
+
+/*Secção de Comentários*/
+
+#Comment {
+    grid-area: com;
+
+    margin: 1em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#writeyour img {
+    border-radius: 2em;
+}
+
+#writeyour input {
+    background-color: hsl(0, 0%, 5%);
+    color: white;
+    border: none;
+    width: 100em;
+}
+
+.com {
+    margin: 1em;
+}
+
+.com img {
+    background-color: white;
+    height: 3em;
+    width: auto;
+    border-radius: 2em;
+}
